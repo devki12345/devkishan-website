@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Devkishan Khatri - Guidance & Journey</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -16,18 +17,27 @@
     header {
       background-color: #0d47a1;
       color: white;
-      padding: 1rem;
+      padding: 2rem 1rem;
       text-align: center;
+    }
+    header img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 3px solid white;
+      margin-bottom: 1rem;
     }
     nav {
       background-color: #1565c0;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       padding: 0.5rem;
     }
     nav a {
       color: white;
-      margin: 0 1rem;
+      margin: 0.5rem;
       text-decoration: none;
       font-weight: 600;
     }
@@ -58,10 +68,19 @@
       text-decoration: none;
       margin-top: 1rem;
     }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav a {
+        margin: 0.25rem;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
+    <img src="profile.jpg" alt="Devkishan's Photo">
     <h1>Devkishan Khatri</h1>
     <p>Helping Juniors Navigate Career Paths | Silver Medallist | Naval Architect</p>
   </header>
@@ -75,17 +94,17 @@
   </nav>
 
   <div class="container">
-    <section id="home">
+    <section id="home" data-aos="fade-up">
       <h2>Welcome!</h2>
       <p>I’m Devkishan, a 2025 graduate and silver medallist from the Department of Ocean Engineering and Naval Architecture, IIT Kharagpur. This platform is my way of helping juniors by sharing placement tips, interview prep, resume insights, and my journey from confusion to clarity.</p>
     </section>
 
-    <section id="guidance">
+    <section id="guidance" data-aos="fade-up">
       <h2>Guidance for Juniors</h2>
       <p>Whether you're confused between core and non-core or struggling to prepare, know that it's okay. Start by identifying your interests early, especially during internships. If you lean towards core, look for companies like IRS, TechnipFMC, Quant Solar etc. Don't hesitate to ask seniors for feedback on your resume and career direction.</p>
     </section>
 
-    <section id="resume">
+    <section id="resume" data-aos="fade-up">
       <h2>Resources & Resume</h2>
       <p>Here’s what you should focus on:</p>
       <ul>
@@ -93,24 +112,29 @@
         <li>Highlight BTP/MTP and core-related internships</li>
         <li>Tools like AutoCAD, ANSYS, Orcaflex</li>
       </ul>
-      <a href="https://drive.google.com" class="btn" target="_blank">Download Sample Resume</a>
+      <a href="https://drive.google.com/your-resume-link" class="btn" target="_blank">Download Sample Resume</a>
     </section>
 
-    <section id="interviews">
+    <section id="interviews" data-aos="fade-up">
       <h2>Interview Experiences</h2>
       <p>Read about my experience with Quant Solar and others. These insights will help you prepare for technical questions, aptitude rounds, and project discussions.</p>
-      <a href="https://forms.gle" class="btn" target="_blank">Submit Your Experience</a>
+      <a href="https://forms.gle/your-form-link" class="btn" target="_blank">Submit Your Experience</a>
     </section>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
       <h2>Contact Me</h2>
       <p>Have doubts? Need help with resume review or career decisions? Reach out anytime.</p>
-      <p><strong>Email:</strong> xyz@gmail.com</p>
+      <p><strong>Email:</strong> devkishankhatri2411@gmail.com</p>
     </section>
   </div>
 
   <footer>
     <p>&copy; 2025 Devkishan Khatri. All rights reserved.</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
