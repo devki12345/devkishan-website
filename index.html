@@ -13,31 +13,23 @@
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
+      transition: background-color 0.3s, color 0.3s;
     }
     header {
       background-color: #0d47a1;
       color: white;
-      padding: 2rem 1rem;
+      padding: 1rem;
       text-align: center;
-    }
-    header img {
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-      border: 3px solid white;
-      margin-bottom: 1rem;
     }
     nav {
       background-color: #1565c0;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       padding: 0.5rem;
     }
     nav a {
       color: white;
-      margin: 0.5rem;
+      margin: 0 1rem;
       text-decoration: none;
       font-weight: 600;
     }
@@ -68,19 +60,38 @@
       text-decoration: none;
       margin-top: 1rem;
     }
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      nav a {
-        margin: 0.25rem;
-      }
+    .profile-img {
+      width: 150px;
+      border-radius: 50%;
+      display: block;
+      margin: 1rem auto;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+    .dark-mode header,
+    .dark-mode nav,
+    .dark-mode footer {
+      background-color: #1c1c1c;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: #0d47a1;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
   <header>
-    <img src="profile.jpg" alt="Devkishan's Photo">
+    <img src="profile.jpg" alt="Devkishan Profile" class="profile-img">
     <h1>Devkishan Khatri</h1>
     <p>Helping Juniors Navigate Career Paths | Silver Medallist | Naval Architect</p>
   </header>
@@ -90,6 +101,8 @@
     <a href="#guidance">Guidance</a>
     <a href="#resume">Resources</a>
     <a href="#interviews">Interview Experiences</a>
+    <a href="#stories">Success Stories</a>
+    <a href="#feedback">Feedback</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -106,19 +119,30 @@
 
     <section id="resume" data-aos="fade-up">
       <h2>Resources & Resume</h2>
-      <p>Here’s what you should focus on:</p>
       <ul>
         <li>Well-written CVs tailored for both core and non-core roles</li>
         <li>Highlight BTP/MTP and core-related internships</li>
         <li>Tools like AutoCAD, ANSYS, Orcaflex</li>
       </ul>
-      <a href="https://drive.google.com/file/d/1EGjt58dFWadGOq6pxasqJSJh1eeX771N/view" class="btn" target="_blank">Download Sample Resume</a>
+      <a href="resume.pdf" class="btn" target="_blank">Download Sample Resume</a>
+      <a href="my_journey.pdf" class="btn" target="_blank">Read My Journey</a>
     </section>
 
     <section id="interviews" data-aos="fade-up">
       <h2>Interview Experiences</h2>
       <p>Read about my experience with Quant Solar and others. These insights will help you prepare for technical questions, aptitude rounds, and project discussions.</p>
-      <a href="https://forms.gle/QtJrPTrWD6xwuFFY6" class="btn" target="_blank">Submit Your Experience</a>
+      <a href="submit-experience.html" class="btn" target="_blank">Submit Your Experience</a>
+    </section>
+
+    <section id="stories" data-aos="fade-up">
+      <h2>Success Stories</h2>
+      <p>Coming soon: Inspiring journeys and placement stories from fellow students. Stay tuned!</p>
+    </section>
+
+    <section id="feedback" data-aos="fade-up">
+      <h2>Feedback</h2>
+      <p>Share what you liked, suggestions for improvement, or anything you'd like to see here.</p>
+      <a href="feedback.html" class="btn" target="_blank">Give Feedback</a>
     </section>
 
     <section id="contact" data-aos="fade-up">
@@ -135,6 +159,9 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
   </script>
 </body>
 </html>
