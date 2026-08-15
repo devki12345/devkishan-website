@@ -1,167 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Devkishan Khatri - Guidance & Journey</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Devkishan Khatri | Naval Architect & Ocean Engineer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-      transition: background-color 0.3s, color 0.3s;
     }
-    header {
-      background-color: #0d47a1;
-      color: white;
-      padding: 1rem;
-      text-align: center;
+
+    html {
+      scroll-behavior: smooth;
     }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f7f9fc;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    /* ---------- NAVBAR ---------- */
+
     nav {
-      background-color: #1565c0;
-      display: flex;
-      justify-content: center;
-      padding: 0.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e5e9f0;
     }
-    nav a {
-      color: white;
-      margin: 0 1rem;
+
+    .nav-container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 16px 25px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0b3c6f;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
       text-decoration: none;
+      color: #344054;
+      font-size: 14px;
       font-weight: 600;
     }
-    .container {
-      max-width: 1000px;
+
+    .nav-links a:hover {
+      color: #0b63a5;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      max-width: 1150px;
       margin: auto;
-      padding: 2rem;
+      padding: 90px 25px 80px;
+
+      display: grid;
+      grid-template-columns: 1.6fr 0.8fr;
+      gap: 60px;
+      align-items: center;
     }
-    section {
-      margin-bottom: 3rem;
+
+    .hero-tag {
+      display: inline-block;
+      background: #e8f2fb;
+      color: #0b5c91;
+      padding: 7px 13px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
     }
-    h2 {
-      color: #0d47a1;
-      margin-bottom: 1rem;
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.1;
+      margin-bottom: 15px;
+      color: #102a43;
     }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #0d47a1;
-      color: white;
+
+    .hero h2 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #176b9e;
+      margin-bottom: 20px;
     }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 17px;
+      color: #52606d;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
     .btn {
       display: inline-block;
-      padding: 0.5rem 1rem;
-      background-color: #0d47a1;
-      color: white;
-      border-radius: 5px;
+      padding: 11px 19px;
+      border-radius: 7px;
       text-decoration: none;
-      margin-top: 1rem;
+      font-size: 14px;
+      font-weight: 600;
     }
-    .profile-img {
-      width: 150px;
-      border-radius: 50%;
-      display: block;
-      margin: 1rem auto;
-    }
-    .dark-mode {
-      background-color: #121212;
-      color: #eee;
-    }
-    .dark-mode header,
-    .dark-mode nav,
-    .dark-mode footer {
-      background-color: #1c1c1c;
-    }
-    .toggle-btn {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background-color: #0d47a1;
+
+    .btn-primary {
+      background: #0b5c91;
       color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      border-radius: 5px;
+    }
+
+    .btn-secondary {
+      border: 1px solid #cbd5e1;
+      color: #344054;
+      background: white;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .profile-card {
+      text-align: center;
+    }
+
+    .profile-card img {
+      width: 210px;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid white;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+    }
+
+    /* ---------- JOURNEY ---------- */
+
+    .section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 70px 25px;
+    }
+
+    .section-title {
+      font-size: 30px;
+      color: #102a43;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      color: #667085;
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+
+    .journey {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+    }
+
+    .journey-card {
+      background: white;
+      padding: 22px 18px;
+      border-radius: 10px;
+      border: 1px solid #e5e9f0;
+    }
+
+    .journey-year {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0b63a5;
+      margin-bottom: 10px;
+    }
+
+    .journey-card h3 {
+      font-size: 16px;
+      margin-bottom: 7px;
+    }
+
+    .journey-card p {
+      font-size: 13px;
+      color: #667085;
+    }
+
+    /* ---------- FOCUS ---------- */
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .focus-card {
+      background: white;
+      border: 1px solid #e5e9f0;
+      border-radius: 10px;
+      padding: 25px;
+    }
+
+    .focus-card h3 {
+      font-size: 17px;
+      margin-bottom: 10px;
+      color: #17324d;
+    }
+
+    .focus-card p {
+      font-size: 14px;
+      color: #667085;
+    }
+
+    /* ---------- CTA ---------- */
+
+    .cta {
+      background: #102a43;
+      color: white;
+      text-align: center;
+      padding: 70px 25px;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: auto auto 25px;
+      color: #d9e2ec;
+    }
+
+    .cta .btn {
+      background: white;
+      color: #102a43;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      background: #0b1f33;
+      color: #b8c4d1;
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+    }
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-top: 60px;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      .profile-card {
+        order: -1;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .journey {
+        grid-template-columns: 1fr;
+      }
+
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
+
 <body>
-  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  <header>
-    <img src="profile.jpg" alt="Devkishan Profile" class="profile-img">
-    <h1>Devkishan Khatri</h1>
-    <p>Helping Juniors Navigate Career Paths | Silver Medallist | Naval Architect</p>
-  </header>
+
+  <!-- NAVIGATION -->
 
   <nav>
-    <a href="#home">Home</a>
-    <a href="#guidance">Guidance</a>
-    <a href="#resume">Resources</a>
-    <a href="#interviews">Interview Experiences</a>
-    <a href="#stories">Success Stories</a>
-    <a href="#feedback">Feedback</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-container">
+
+      <div class="logo">
+        Devkishan Khatri
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#focus">Engineering</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
   </nav>
 
-  <div class="container">
-    <section id="home" data-aos="fade-up">
-      <h2>Welcome!</h2>
-      <p>I’m Devkishan Khatri, a (Dual degree) 2025 graduate and silver medallist from the Department of Ocean Engineering and Naval Architecture, IIT Kharagpur. This platform is my way of helping juniors by sharing placement tips, interview prep, resume insights, and my journey from confusion to clarity.</p>
-    </section>
 
-    <section id="guidance" data-aos="fade-up">
-      <h2>Guidance for Juniors</h2>
-      <p>Whether you're confused between core and non-core or struggling to prepare, know that it's okay. Start by identifying your interests early, especially during internships. If you lean towards core, look for companies like IRS, TechnipFMC, Quant Solar etc. Don't hesitate to ask seniors for feedback on your resume and career direction.</p>
-    </section>
+  <!-- HERO -->
 
-    <section id="resume" data-aos="fade-up">
-      <h2>Resources & Resume</h2>
-      <ul>
-        <li>Well-written CVs tailored for both core and non-core roles</li>
-        <li>Highlight BTP/MTP and core-related internships</li>
-        <li>Tools like AutoCAD, ANSYS, Orcaflex</li>
-      </ul>
-      <a href="resume.pdf" class="btn" target="_blank">Download Sample Resume</a>
-      <a href="my_journey.pdf" class="btn" target="_blank">Read My Journey</a>
-    </section>
+  <section class="hero" id="home">
 
-    <section id="interviews" data-aos="fade-up">
-      <h2>Interview Experiences</h2>
-      <p>Read about my experience with Quant Solar and others. These insights will help you prepare for technical questions, aptitude rounds, and project discussions.</p>
-      <a href="submit-experience.html" class="btn" target="_blank">Submit Your Experience</a>
-    </section>
+    <div>
 
-    <section id="stories" data-aos="fade-up">
-      <h2>Success Stories</h2>
-      <p>Coming soon: Inspiring journeys and placement stories from fellow students. Stay tuned!</p>
-    </section>
+      <span class="hero-tag">
+        Naval Architect • Ocean & Offshore Engineering
+      </span>
 
-    <section id="feedback" data-aos="fade-up">
-      <h2>Feedback</h2>
-      <p>Share what you liked, suggestions for improvement, or anything you'd like to see here.</p>
-      <a href="feedback.html" class="btn" target="_blank">Give Feedback</a>
-    </section>
+      <h1>
+        Devkishan Khatri
+      </h1>
 
-    <section id="contact" data-aos="fade-up">
-      <h2>Contact Me</h2>
-      <p>Have doubts? Need help with resume review or career decisions? Reach out anytime.</p>
-      <p><strong>Email:</strong> devkishankhatri2411@gmail.com</p>
-    </section>
-  </div>
+      <h2>
+        From Ocean Engineering to Real-World Offshore Systems
+      </h2>
+
+      <p>
+        Naval Architect with a background in Ocean Engineering and Naval
+        Architecture from IIT Kharagpur, working on hydrodynamics,
+        mooring systems, offshore analysis, and floating energy systems.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#journey" class="btn btn-primary">
+          Explore My Journey
+        </a>
+
+        <a href="resume.pdf" target="_blank" class="btn btn-secondary">
+          View Resume
+        </a>
+
+        <a href="my_journey.pdf" target="_blank" class="btn btn-secondary">
+          My Journey
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="profile-card">
+
+      <img
+        src="profile.jpg"
+        alt="Devkishan Khatri"
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- JOURNEY -->
+
+  <section class="section" id="journey">
+
+    <h2 class="section-title">
+      My Engineering Journey
+    </h2>
+
+    <p class="section-subtitle">
+      A journey from academic fundamentals in Ocean Engineering
+      to research and real-world engineering applications.
+    </p>
+
+
+    <div class="journey">
+
+      <div class="journey-card">
+
+        <div class="journey-year">
+          2021
+        </div>
+
+        <h3>
+          IIT Kharagpur
+        </h3>
+
+        <p>
+          Began my Dual Degree journey in Ocean Engineering
+          and Naval Architecture.
+        </p>
+
+      </div>
+
+
+      <div class="journey-card">
+
+        <div class="journey-year">
+          2024
+        </div>
+
+        <h3>
+          Offshore Exposure
+        </h3>
+
+        <p>
+          Gained industry and research experience through
+          internships in naval architecture and offshore engineering.
+        </p>
+
+      </div>
+
+
+      <div class="journey-card">
+
+        <div class="journey-year">
+          2024–25
+        </div>
+
+        <h3>
+          M.Tech Research
+        </h3>
+
+        <p>
+          Investigated vortex-induced vibration of flexible
+          marine risers using CFD and fluid-structure interaction.
+        </p>
+
+      </div>
+
+
+      <div class="journey-card">
+
+        <div class="journey-year">
+          2025
+        </div>
+
+        <h3>
+          Industry
+        </h3>
+
+        <p>
+          Joined QuantSolar Technologies as a Naval Architect
+          in Research & Development.
+        </p>
+
+      </div>
+
+
+      <div class="journey-card">
+
+        <div class="journey-year">
+          Present
+        </div>
+
+        <h3>
+          Floating Systems
+        </h3>
+
+        <p>
+          Working on CFD, hydrodynamics, mooring, anchoring,
+          automation, and floating solar systems.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ENGINEERING FOCUS -->
+
+  <section class="section" id="focus">
+
+    <h2 class="section-title">
+      Areas of Engineering
+    </h2>
+
+    <p class="section-subtitle">
+      My work sits at the intersection of marine engineering,
+      numerical analysis, computational tools, and offshore systems.
+    </p>
+
+
+    <div class="focus-grid">
+
+      <div class="focus-card">
+
+        <h3>
+          Hydrodynamics
+        </h3>
+
+        <p>
+          CFD, hydrodynamic loads, hydrostatics, wave response,
+          and marine system behaviour.
+        </p>
+
+      </div>
+
+
+      <div class="focus-card">
+
+        <h3>
+          Mooring & Anchoring
+        </h3>
+
+        <p>
+          Station keeping, environmental loading, mooring
+          configuration, line tension, and anchoring analysis.
+        </p>
+
+      </div>
+
+
+      <div class="focus-card">
+
+        <h3>
+          Offshore Structures
+        </h3>
+
+        <p>
+          Marine risers, floating platforms, structural response,
+          and offshore engineering applications.
+        </p>
+
+      </div>
+
+
+      <div class="focus-card">
+
+        <h3>
+          Computational Engineering
+        </h3>
+
+        <p>
+          Numerical simulation and engineering automation using
+          Python, VBA, AutoLISP, and industry-standard software.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta" id="contact">
+
+    <h2>
+      Interested in my work?
+    </h2>
+
+    <p>
+      Explore my projects, research, engineering journey,
+      and experience in Ocean and Offshore Engineering.
+    </p>
+
+    <a
+      href="mailto:devkishankhatri2411@gmail.com"
+      class="btn"
+    >
+      Get in Touch
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
 
   <footer>
-    <p>&copy; 2025 Devkishan Khatri. All rights reserved.</p>
+
+    <p>
+      © 2026 Devkishan Khatri
+    </p>
+
+    <p>
+      Ocean & Offshore Engineering
+    </p>
+
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
 </body>
 </html>
