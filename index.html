@@ -7,7 +7,231 @@
   <title>Devkishan Khatri | Naval Architect & Ocean Engineer</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+/* ================================
+   MY ENGINEERING JOURNEY
+   ================================ */
 
+.journey-section {
+    padding: 90px 8%;
+    background: #f8fafc;
+}
+
+.section-heading {
+    max-width: 850px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    margin: 0 0 18px;
+}
+
+.section-intro {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #64748b;
+}
+
+
+/* Timeline */
+
+.journey-timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.journey-timeline::before {
+    content: "";
+    position: absolute;
+    left: 120px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #cbd5e1;
+}
+
+.journey-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 60px;
+    position: relative;
+    margin-bottom: 55px;
+}
+
+.journey-year {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: right;
+    padding-top: 5px;
+}
+
+.journey-content {
+    position: relative;
+    background: white;
+    padding: 30px 35px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.journey-content::before {
+    content: "";
+    position: absolute;
+    left: -68px;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 3px solid #0f172a;
+}
+
+.journey-content h3 {
+    font-size: 23px;
+    margin: 0 0 6px;
+}
+
+.journey-content h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 18px;
+}
+
+.journey-content p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #475569;
+    margin-bottom: 14px;
+}
+
+
+/* Highlights */
+
+.journey-highlight {
+    margin-top: 20px;
+    padding: 15px 18px;
+    border-left: 3px solid #0f172a;
+    background: #f8fafc;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.journey-highlight strong {
+    font-size: 14px;
+}
+
+.journey-highlight span {
+    font-size: 14px;
+    color: #475569;
+}
+
+
+/* QuantSolar subsections */
+
+.journey-subsection {
+    margin-top: 22px;
+}
+
+.journey-subsection h5 {
+    font-size: 15px;
+    margin: 0 0 6px;
+}
+
+.journey-subsection p {
+    margin-bottom: 0;
+}
+
+
+/* Where I am today */
+
+.journey-future {
+    max-width: 850px;
+    margin: 80px auto 0;
+    text-align: center;
+}
+
+.journey-future h3 {
+    font-size: 28px;
+    margin: 10px 0 18px;
+}
+
+.journey-future > p:not(.section-label) {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* Interest tags */
+
+.interest-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.interest-list span {
+    padding: 9px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .journey-section {
+        padding: 60px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .journey-timeline::before {
+        left: 8px;
+    }
+
+    .journey-item {
+        display: block;
+        margin-bottom: 40px;
+        padding-left: 30px;
+    }
+
+    .journey-year {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    .journey-content {
+        padding: 24px;
+    }
+
+    .journey-content::before {
+        left: -30px;
+        top: 8px;
+    }
+
+    .journey-content h3 {
+        font-size: 20px;
+    }
+}
   <style>
     * {
       box-sizing: border-box;
@@ -388,115 +612,101 @@
 
   </section>
 
+<!-- JOURNEY -->
 
-  <!-- JOURNEY -->
-
-  <section class="section" id="journey">
+<section class="section" id="journey">
 
     <h2 class="section-title">
-      My Engineering Journey
+        My Engineering Journey
     </h2>
 
     <p class="section-subtitle">
-      A journey from academic fundamentals in Ocean Engineering
-      to research and real-world engineering applications.
+        From Ocean Engineering fundamentals to computational research and
+        real-world offshore engineering.
     </p>
-
 
     <div class="journey">
 
-      <div class="journey-card">
+        <div class="journey-card">
 
-        <div class="journey-year">
-          2021
+            <div class="journey-year">
+                2021–2025
+            </div>
+
+            <h3>
+                IIT Kharagpur
+            </h3>
+
+            <p>
+                Pursued a Dual Degree in Ocean Engineering & Naval Architecture,
+                building strong foundations in hydrodynamics, marine structures,
+                stability and offshore engineering.
+            </p>
+
         </div>
 
-        <h3>
-          IIT Kharagpur
-        </h3>
 
-        <p>
-          Began my Dual Degree journey in Ocean Engineering
-          and Naval Architecture.
-        </p>
+        <div class="journey-card">
 
-      </div>
+            <div class="journey-year">
+                2024
+            </div>
 
+            <h3>
+                Naval Architect & Offshore Exposure
+            </h3>
 
-      <div class="journey-card">
+            <p>
+                Applied naval architecture concepts through internships at IIT
+                Kharagpur and TechnipFMC, gaining hands-on experience in vessel
+                analysis and offshore riser simulations using OrcaFlex.
+            </p>
 
-        <div class="journey-year">
-          2024
         </div>
 
-        <h3>
-          Offshore Exposure
-        </h3>
 
-        <p>
-          Gained industry and research experience through
-          internships in naval architecture and offshore engineering.
-        </p>
+        <div class="journey-card">
 
-      </div>
+            <div class="journey-year">
+                2024–2025
+            </div>
 
+            <h3>
+                M.Tech Research
+            </h3>
 
-      <div class="journey-card">
+            <p>
+                Investigated vortex-induced vibration of flexible marine risers
+                through CFD and fluid–structure interaction, developing
+                experience in computational marine engineering and research.
+            </p>
 
-        <div class="journey-year">
-          2024–25
         </div>
 
-        <h3>
-          M.Tech Research
-        </h3>
 
-        <p>
-          Investigated vortex-induced vibration of flexible
-          marine risers using CFD and fluid-structure interaction.
-        </p>
+        <div class="journey-card">
 
-      </div>
+            <div class="journey-year">
+                2025–Present
+            </div>
 
+            <h3>
+                QuantSolar Technologies — Naval Architect (R&D)
+            </h3>
 
-      <div class="journey-card">
+            <p>
+                Working on real-world floating solar systems through CFD,
+                hydrodynamics, mooring and anchoring analysis, automation and
+                new design development. Also contribute to technical reviews,
+                third-party approvals and collaboration with academic and
+                industry partners.
+            </p>
 
-        <div class="journey-year">
-          2025
         </div>
-
-        <h3>
-          Industry
-        </h3>
-
-        <p>
-          Joined QuantSolar Technologies as a Naval Architect
-          in Research & Development.
-        </p>
-
-      </div>
-
-
-      <div class="journey-card">
-
-        <div class="journey-year">
-          Present
-        </div>
-
-        <h3>
-          Floating Systems
-        </h3>
-
-        <p>
-          Working on CFD, hydrodynamics, mooring, anchoring,
-          automation, and floating solar systems.
-        </p>
-
-      </div>
 
     </div>
 
-  </section>
+</section>
 
 
   <!-- ENGINEERING FOCUS -->
@@ -611,6 +821,236 @@
     </p>
 
   </footer>
+<!-- MY ENGINEERING JOURNEY -->
+<section id="journey" class="journey-section">
 
+    <div class="section-heading">
+        <p class="section-label">MY JOURNEY</p>
+        <h2>My Engineering Journey</h2>
+        <p class="section-intro">
+            From marine engineering fundamentals to computational research
+            and real-world offshore engineering.
+        </p>
+    </div>
+
+    <div class="journey-timeline">
+
+        <div class="journey-item">
+            <div class="journey-year">2021–2025</div>
+
+            <div class="journey-content">
+                <h3>Building the Foundation</h3>
+                <h4>IIT Kharagpur</h4>
+
+                <p>
+                    Dual Degree — B.Tech + M.Tech in Ocean Engineering
+                    &amp; Naval Architecture.
+                </p>
+
+                <p>
+                    Built a strong foundation in hydrostatics, stability,
+                    marine hydrodynamics, offshore structures, ship
+                    resistance, propulsion, ocean engineering and
+                    computational methods.
+                </p>
+
+                <div class="journey-highlight">
+                    <strong>CGPA: 8.81 / 10</strong>
+                    <span>Institute Silver Medal</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="journey-item">
+            <div class="journey-year">2024</div>
+
+            <div class="journey-content">
+                <h3>First Step into Engineering Applications</h3>
+                <h4>Naval Architect Intern — IIT Kharagpur</h4>
+
+                <p>
+                    Applied naval architecture concepts to realistic vessel
+                    engineering problems involving dynamic positioning,
+                    thruster failure scenarios, vessel stability and
+                    resistance estimation.
+                </p>
+
+                <p>
+                    Developed a C# algorithm for vessel stability under
+                    upright and damage conditions and estimated resistance
+                    and power using the Holtrop method.
+                </p>
+
+                <div class="journey-highlight">
+                    <strong>Key Learning</strong>
+                    <span>
+                        Understanding how marine engineering principles
+                        translate into practical engineering decisions.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="journey-item">
+            <div class="journey-year">2024</div>
+
+            <div class="journey-content">
+                <h3>Entering Offshore Analysis</h3>
+                <h4>Installation &amp; Analysis Engineering Intern — TechnipFMC</h4>
+
+                <p>
+                    Gained practical exposure to offshore engineering through
+                    static and dynamic OrcaFlex analysis of marine risers
+                    across multiple loading conditions.
+                </p>
+
+                <p>
+                    Generated 96 simulation files and developed Python-based
+                    automation for high-volume post-processing workflows.
+                </p>
+
+                <div class="journey-highlight">
+                    <strong>Key Learning</strong>
+                    <span>
+                        Dynamic offshore analysis, engineering workflows
+                        and analysis automation.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="journey-item">
+            <div class="journey-year">2024–2025</div>
+
+            <div class="journey-content">
+                <h3>Researching Complex Marine Behaviour</h3>
+                <h4>M.Tech Research — IIT Kharagpur</h4>
+
+                <p>
+                    Investigated vortex-induced vibration (VIV) of flexible
+                    marine risers under the Deep Ocean Mission project.
+                </p>
+
+                <p>
+                    Developed a fluid-structure interaction framework using
+                    finite-element methods within an Arbitrary Lagrangian-
+                    Eulerian (ALE) formulation.
+                </p>
+
+                <p>
+                    The research involved CFD, FSI, flexible riser modelling,
+                    large-scale computational simulations and supercomputer-
+                    based analysis involving 4.2M+ nodes.
+                </p>
+
+                <div class="journey-highlight">
+                    <strong>Result</strong>
+                    <span>Up to 40% reduction in VIV amplitude.</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="journey-item">
+            <div class="journey-year">2025–Present</div>
+
+            <div class="journey-content">
+                <h3>From Research to Real Engineering</h3>
+                <h4>Naval Architect — Research &amp; Development</h4>
+
+                <p>
+                    At QuantSolar Technologies, my work moved from academic
+                    and research problems to real engineering projects
+                    involving floating solar systems.
+                </p>
+
+                <div class="journey-subsection">
+                    <h5>Hydrodynamics &amp; Floating Systems</h5>
+                    <p>
+                        CFD simulations using ANSYS Fluent, hydrostatic analysis
+                        using Maxsurf, and hydrodynamic assessments using
+                        ANSYS AQWA.
+                    </p>
+                </div>
+
+                <div class="journey-subsection">
+                    <h5>Mooring &amp; Anchoring</h5>
+                    <p>
+                        OrcaFlex-based station-keeping analysis considering
+                        wind, wave and current loading, including shore and
+                        underwater anchoring systems, intact and damage cases,
+                        and site-specific configurations.
+                    </p>
+                </div>
+
+                <div class="journey-subsection">
+                    <h5>Research &amp; Development</h5>
+                    <p>
+                        Investigating elastic mooring concepts for floating
+                        solar platforms and contributing to the technical
+                        evaluation of new floating solar designs.
+                    </p>
+                </div>
+
+                <div class="journey-subsection">
+                    <h5>Computational Engineering &amp; Automation</h5>
+                    <p>
+                        Developing engineering workflows using Python, VBA,
+                        AutoLISP, OrcaFlex Python API and OrcaWave/OrcaFlex
+                        data extraction.
+                    </p>
+                </div>
+
+                <div class="journey-subsection">
+                    <h5>Technical Coordination &amp; External Collaboration</h5>
+                    <p>
+                        Coordinating technical reviews with IIT faculty,
+                        RINA, IRS and DNV, while collaborating with IIT Madras
+                        on experimental studies for new floating solar designs.
+                    </p>
+                </div>
+
+                <div class="journey-highlight">
+                    <strong>Key Learning</strong>
+                    <span>
+                        Engineering goes beyond simulation — it involves
+                        technical communication, independent review,
+                        design iteration, validation and collaboration.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="journey-future">
+
+        <p class="section-label">WHERE I AM TODAY</p>
+
+        <h3>From Learning → Investigating → Engineering</h3>
+
+        <p>
+            My journey has progressed from building fundamentals in Ocean
+            Engineering and Naval Architecture, to investigating complex
+            marine phenomena through computational research, and finally
+            applying engineering analysis to real floating-system projects.
+        </p>
+
+        <div class="interest-list">
+            <span>Hydrodynamics</span>
+            <span>Offshore Structures</span>
+            <span>Mooring &amp; Anchoring</span>
+            <span>Marine Risers</span>
+            <span>Floating Systems</span>
+            <span>Computational Engineering</span>
+        </div>
+
+    </div>
+
+</section>
 </body>
 </html>
