@@ -237,7 +237,61 @@
       color: #667085;
     }
 
+/* ---------- PROJECTS ---------- */
 
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  border: 1px solid #e5e9f0;
+  border-radius: 12px;
+  padding: 28px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.project-number {
+  font-size: 13px;
+  font-weight: 800;
+  color: #0b63a5;
+  margin-bottom: 12px;
+}
+
+.project-card h3 {
+  font-size: 19px;
+  color: #17324d;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #667085;
+  margin-bottom: 20px;
+}
+
+.project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tools span {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #e8f2fb;
+  color: #0b5c91;
+  font-size: 12px;
+  font-weight: 600;
+}
 
 
 
@@ -309,6 +363,9 @@
 
       .journey {
         grid-template-columns: 1fr;
+      }
+      .projects-grid {
+         grid-template-columns: 1fr;
       }
 
       .focus-grid {
@@ -564,7 +621,188 @@
   </div>
 
 </section>
+<!-- SELECTED ENGINEERING WORK -->
 
+<section class="section" id="projects">
+
+  <h2 class="section-title">
+    Selected Engineering Work
+  </h2>
+
+  <p class="section-subtitle">
+    Selected engineering, research and automation work spanning
+    offshore analysis, floating systems and computational engineering.
+  </p>
+
+  <div class="projects-grid">
+
+    <!-- PROJECT 1 -->
+
+    <div class="project-card">
+
+      <div class="project-number">
+        01
+      </div>
+
+      <h3>
+        Floating Solar Mooring & Anchoring Analysis
+      </h3>
+
+      <p>
+        Station-keeping analysis of floating solar islands using OrcaFlex
+        under wind, wave and current loading. Evaluated mooring
+        configurations, line tensions, excursions and anchoring behaviour
+        across site-specific load cases.
+      </p>
+
+      <div class="project-tools">
+        <span>OrcaFlex</span>
+        <span>ANSYS Fluent</span>
+        <span>Mooring Analysis</span>
+      </div>
+
+    </div>
+
+
+    <!-- PROJECT 2 -->
+
+    <div class="project-card">
+
+      <div class="project-number">
+        02
+      </div>
+
+      <h3>
+        Hydrodynamic & CFD Analysis of Floating Systems
+      </h3>
+
+      <p>
+        Evaluated wind and hydrodynamic loads for floating solar structures
+        using CFD, hydrostatic and hydrodynamic analysis to support
+        structural and mooring design decisions.
+      </p>
+
+      <div class="project-tools">
+        <span>ANSYS Fluent</span>
+        <span>ANSYS AQWA</span>
+        <span>Maxsurf</span>
+      </div>
+
+    </div>
+
+
+    <!-- PROJECT 3 -->
+
+    <div class="project-card">
+
+      <div class="project-number">
+        03
+      </div>
+
+      <h3>
+        Elastic Mooring System — R&D
+      </h3>
+
+      <p>
+        Investigated elastic mooring concepts for floating solar platforms
+        exposed to significant water-level variations, with the objective
+        of improving station keeping and platform stability.
+      </p>
+
+      <div class="project-tools">
+        <span>OrcaFlex</span>
+        <span>Mooring Dynamics</span>
+        <span>R&D</span>
+      </div>
+
+    </div>
+
+
+    <!-- PROJECT 4 -->
+
+    <div class="project-card">
+
+      <div class="project-number">
+        04
+      </div>
+
+      <h3>
+        Offshore Analysis Automation
+      </h3>
+
+      <p>
+        Developed Python-based engineering workflows using the OrcaFlex
+        Python API to automate extraction of wave-induced pressure data
+        from OrcaWave frequency-domain and OrcaFlex time-domain analyses.
+      </p>
+
+      <div class="project-tools">
+        <span>Python</span>
+        <span>OrcaFlex API</span>
+        <span>OrcaWave</span>
+      </div>
+
+    </div>
+
+
+    <!-- PROJECT 5 -->
+
+    <div class="project-card">
+
+      <div class="project-number">
+        05
+      </div>
+
+      <h3>
+        Vortex-Induced Vibration of Marine Risers
+      </h3>
+
+      <p>
+        Investigated vortex-induced vibration of flexible marine risers
+        through CFD and fluid–structure interaction, using large-scale
+        computational simulations to study riser response and VIV behaviour.
+      </p>
+
+      <div class="project-tools">
+        <span>CFD</span>
+        <span>FSI</span>
+        <span>FEM</span>
+        <span>HPC</span>
+      </div>
+
+    </div>
+
+
+    <!-- PROJECT 6 -->
+
+    <div class="project-card">
+
+      <div class="project-number">
+        06
+      </div>
+
+      <h3>
+        Engineering Design Automation
+      </h3>
+
+      <p>
+        Developed automation tools for repetitive engineering workflows,
+        including steel-section property extraction, mooring coordinate
+        generation and CAD automation, reducing manual calculation and
+        drafting effort.
+      </p>
+
+      <div class="project-tools">
+        <span>Python</span>
+        <span>VBA</span>
+        <span>AutoLISP</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
   <!-- CTA -->
 
   <section class="cta" id="contact">
