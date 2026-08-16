@@ -1,844 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Devkishan Khatri | Naval Architect & Ocean Engineer</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-
-
-  
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #f7f9fc;
-      color: #172033;
-      line-height: 1.6;
-    }
-
-    /* ---------- NAVBAR ---------- */
-
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #e5e9f0;
-    }
-
-    .nav-container {
-      max-width: 1150px;
-      margin: auto;
-      padding: 16px 25px;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 20px;
-      font-weight: 800;
-      color: #0b3c6f;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 25px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #344054;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover {
-      color: #0b63a5;
-    }
-
-    /* ---------- HERO ---------- */
-
-    .hero {
-      max-width: 1150px;
-      margin: auto;
-      padding: 90px 25px 80px;
-
-      display: grid;
-      grid-template-columns: 1.6fr 0.8fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .hero-tag {
-      display: inline-block;
-      background: #e8f2fb;
-      color: #0b5c91;
-      padding: 7px 13px;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-size: 52px;
-      line-height: 1.1;
-      margin-bottom: 15px;
-      color: #102a43;
-    }
-
-    .hero h2 {
-      font-size: 24px;
-      font-weight: 600;
-      color: #176b9e;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      font-size: 17px;
-      color: #52606d;
-      margin-bottom: 30px;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 11px 19px;
-      border-radius: 7px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .btn-primary {
-      background: #0b5c91;
-      color: white;
-    }
-
-    .btn-secondary {
-      border: 1px solid #cbd5e1;
-      color: #344054;
-      background: white;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .profile-card {
-      text-align: center;
-    }
-
-    .profile-card img {
-      width: 210px;
-      height: 210px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 6px solid white;
-      box-shadow: 0 10px 35px rgba(0,0,0,0.12);
-    }
-
-    /* ---------- JOURNEY ---------- */
-
-    .section {
-      max-width: 1150px;
-      margin: auto;
-      padding: 70px 25px;
-    }
-
-    .section-title {
-      font-size: 30px;
-      color: #102a43;
-      margin-bottom: 10px;
-    }
-
-    .section-subtitle {
-      color: #667085;
-      margin-bottom: 40px;
-      max-width: 700px;
-    }
-
-    .journey {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .journey-card {
-      background: white;
-      padding: 22px 18px;
-      border-radius: 10px;
-      border: 1px solid #e5e9f0;
-    }
-
-    .journey-year {
-      font-size: 14px;
-      font-weight: 800;
-      color: #0b63a5;
-      margin-bottom: 10px;
-    }
-
-    .journey-card h3 {
-      font-size: 16px;
-      margin-bottom: 7px;
-    }
-
-    .journey-card p {
-      font-size: 13px;
-      color: #667085;
-    }
-
-    /* ---------- FOCUS ---------- */
-
-    .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .focus-card {
-      background: white;
-      border: 1px solid #e5e9f0;
-      border-radius: 10px;
-      padding: 25px;
-    }
-
-    .focus-card h3 {
-      font-size: 17px;
-      margin-bottom: 10px;
-      color: #17324d;
-    }
-
-    .focus-card p {
-      font-size: 14px;
-      color: #667085;
-    }
-
-/* ---------- PROJECTS ---------- */
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devkishan Khatri | Naval Architect & Ocean Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --navy:#0a1628;
+  --navy-mid:#0f2340;
+  --steel:#1e4d7b;
+  --ocean:#0e7fa3;
+  --ocean-light:#e6f4f9;
+  --slate:#52728f;
+  --muted:#8fa8c0;
+  --light:#e8f0f7;
+  --white:#ffffff;
+  --text:#0d1f35;
+  --body:#4a6380;
 }
+body{font-family:'Inter',sans-serif;background:#f5f8fc;color:var(--text);line-height:1.65}
 
-.project-card {
-  background: white;
-  border: 1px solid #e5e9f0;
-  border-radius: 12px;
-  padding: 28px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+/* ── NAV ── */
+nav{position:sticky;top:0;z-index:100;background:rgba(10,22,40,0.97);backdrop-filter:blur(12px)}
+.nav-inner{max-width:1140px;margin:auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;color:var(--white);letter-spacing:-0.3px}
+.logo span{color:var(--ocean)}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:13.5px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--ocean);color:var(--white)!important;padding:7px 16px;border-radius:6px;font-size:13px!important;transition:background .2s!important}
+.nav-cta:hover{background:#0b91bb!important}
+
+/* ── HERO ── */
+.hero{position:relative;overflow:hidden;background:var(--navy);min-height:100vh;display:flex;align-items:center}
+.hero-bg{position:absolute;inset:0;opacity:0.35}
+.hero-bg svg{width:100%;height:100%}
+.grid-lines{position:absolute;inset:0;background-image:linear-gradient(rgba(14,127,163,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(14,127,163,0.07) 1px,transparent 1px);background-size:60px 60px}
+.hero-inner{max-width:1140px;margin:auto;padding:120px 28px 100px;display:grid;grid-template-columns:1.5fr 1fr;gap:70px;align-items:center;position:relative;z-index:2}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(14,127,163,0.15);border:1px solid rgba(14,127,163,0.3);color:#5dd3f0;padding:6px 14px;border-radius:30px;font-size:12.5px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:24px}
+.dot-pulse{width:7px;height:7px;border-radius:50%;background:#5dd3f0;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.85)}}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:58px;line-height:1.08;font-weight:700;color:var(--white);letter-spacing:-1.5px;margin-bottom:18px}
+.hero h1 em{color:var(--ocean);font-style:normal}
+.hero-sub{font-size:16.5px;color:#8fa8c0;line-height:1.7;margin-bottom:36px;max-width:520px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:50px}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:12px 22px;border-radius:7px;font-size:14px;font-weight:600;text-decoration:none;transition:all .2s}
+.btn-primary{background:var(--ocean);color:var(--white)}
+.btn-primary:hover{background:#0b91bb;transform:translateY(-1px)}
+.btn-outline{border:1px solid rgba(255,255,255,0.18);color:var(--white);background:rgba(255,255,255,0.05)}
+.btn-outline:hover{border-color:rgba(255,255,255,0.35);background:rgba(255,255,255,0.1)}
+.hero-stats{display:flex;gap:32px}
+.stat{border-left:2px solid var(--ocean);padding-left:14px}
+.stat-num{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;color:var(--white)}
+.stat-label{font-size:12px;color:var(--muted);margin-top:1px}
+.hero-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:30px;backdrop-filter:blur(8px)}
+.profile-img{width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid rgba(14,127,163,0.5);display:block;margin:0 auto 22px}
+.profile-name{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:var(--white);text-align:center;margin-bottom:4px}
+.profile-role{font-size:13px;color:var(--ocean);text-align:center;margin-bottom:20px;font-weight:500}
+.info-rows{display:flex;flex-direction:column;gap:10px}
+.info-row{display:flex;align-items:center;gap:10px;font-size:13px;color:#8fa8c0}
+.info-icon{width:28px;height:28px;background:rgba(14,127,163,0.15);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px}
+
+/* ── AUDIENCE SECTION ── */
+.audience{background:var(--white);padding:80px 28px}
+.audience-inner{max-width:1140px;margin:auto}
+.section-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--ocean);margin-bottom:10px}
+.section-title{font-family:'Space Grotesk',sans-serif;font-size:34px;font-weight:700;color:var(--text);letter-spacing:-0.5px;margin-bottom:12px}
+.section-desc{font-size:15.5px;color:var(--body);margin-bottom:48px;max-width:600px}
+.audience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.audience-card{border-radius:12px;padding:30px;position:relative;overflow:hidden}
+.audience-card.recruiter{background:linear-gradient(135deg,#0a1628 0%,#0f2d4a 100%);color:var(--white)}
+.audience-card.freelance{background:linear-gradient(135deg,#062a38 0%,#0b4d68 100%);color:var(--white)}
+.audience-card.startup{background:linear-gradient(135deg,#0a1f0a 0%,#0d3d1a 100%);color:var(--white)}
+.audience-icon{font-size:32px;margin-bottom:16px}
+.audience-card h3{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;margin-bottom:10px}
+.audience-card p{font-size:14px;line-height:1.7;opacity:0.8}
+.audience-tag{display:inline-block;margin-top:18px;padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600}
+.audience-card.recruiter .audience-tag{background:rgba(14,127,163,0.25);color:#5dd3f0}
+.audience-card.freelance .audience-tag{background:rgba(14,127,163,0.25);color:#5dd3f0}
+.audience-card.startup .audience-tag{background:rgba(76,175,80,0.25);color:#a5d6a7}
+
+/* ── EXPERIENCE ── */
+.experience{background:#f5f8fc;padding:80px 28px}
+.exp-inner{max-width:1140px;margin:auto}
+.timeline{display:flex;flex-direction:column;gap:0}
+.tl-item{display:grid;grid-template-columns:180px 1fr;gap:0;position:relative}
+.tl-item:not(:last-child)::after{content:'';position:absolute;left:179px;top:36px;bottom:-1px;width:1px;background:linear-gradient(to bottom,var(--ocean),rgba(14,127,163,0))}
+.tl-left{padding:28px 30px 28px 0;text-align:right}
+.tl-date{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:var(--ocean);margin-bottom:4px}
+.tl-co{font-size:12px;color:var(--muted)}
+.tl-dot{position:absolute;left:171px;top:32px;width:17px;height:17px;border-radius:50%;background:var(--ocean);border:3px solid var(--white);box-shadow:0 0 0 2px var(--ocean)}
+.tl-right{padding:28px 0 28px 36px}
+.tl-right h3{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:var(--text);margin-bottom:8px}
+.tl-right p{font-size:14px;color:var(--body);line-height:1.7;margin-bottom:14px}
+.tag-row{display:flex;gap:7px;flex-wrap:wrap}
+.tag{padding:4px 10px;background:var(--ocean-light);color:var(--steel);border-radius:20px;font-size:12px;font-weight:600}
+
+/* ── SKILLS ── */
+.skills{background:var(--white);padding:80px 28px}
+.skills-inner{max-width:1140px;margin:auto}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.skill-group h3{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--light)}
+.skill-item{margin-bottom:16px}
+.skill-top{display:flex;justify-content:space-between;font-size:13.5px;margin-bottom:6px}
+.skill-name{font-weight:600;color:var(--text)}
+.skill-pct{font-weight:600;color:var(--ocean);font-size:12px}
+.skill-bar{height:5px;background:var(--light);border-radius:3px;overflow:hidden}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--steel),var(--ocean));border-radius:3px;transition:width 1s ease}
+
+/* ── PROJECTS ── */
+.projects{background:#f5f8fc;padding:80px 28px}
+.proj-inner{max-width:1140px;margin:auto}
+.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.proj-card{background:var(--white);border:1px solid #dde6f0;border-radius:12px;padding:26px;transition:all .2s}
+.proj-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(10,22,40,0.09);border-color:rgba(14,127,163,0.3)}
+.proj-num{font-size:11px;font-weight:800;color:var(--ocean);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:12px}
+.proj-card h3{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin-bottom:10px;line-height:1.35}
+.proj-card p{font-size:13.5px;color:var(--body);line-height:1.7;margin-bottom:16px}
+.proj-tools{display:flex;gap:6px;flex-wrap:wrap}
+.proj-tools span{padding:3px 9px;background:var(--ocean-light);color:var(--steel);border-radius:20px;font-size:11.5px;font-weight:600}
+
+/* ── AUTOMATION ── */
+.automation{background:var(--navy);padding:80px 28px}
+.auto-inner{max-width:1140px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.auto-text .section-label{color:#5dd3f0}
+.auto-text .section-title{color:var(--white)}
+.auto-text .section-desc{color:var(--muted);margin-bottom:32px}
+.auto-stats{display:flex;flex-direction:column;gap:16px}
+.auto-stat{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:20px 24px;display:flex;align-items:center;gap:18px}
+.auto-stat-num{font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;color:var(--ocean);min-width:80px}
+.auto-stat-info h4{font-size:14px;font-weight:600;color:var(--white);margin-bottom:3px}
+.auto-stat-info p{font-size:13px;color:var(--muted);line-height:1.5}
+
+/* ── CTA ── */
+.cta{background:linear-gradient(135deg,#0a1628 0%,#0b3d5c 100%);padding:90px 28px;text-align:center}
+.cta h2{font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;color:var(--white);letter-spacing:-0.8px;margin-bottom:14px}
+.cta p{font-size:16px;color:var(--muted);max-width:560px;margin:0 auto 36px}
+.cta-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:var(--white);color:var(--navy);font-weight:700}
+.btn-white:hover{background:#e8f0f7;transform:translateY(-1px)}
+.btn-ocean-outline{border:1px solid rgba(14,127,163,0.5);color:#5dd3f0;background:rgba(14,127,163,0.08)}
+.btn-ocean-outline:hover{background:rgba(14,127,163,0.18);border-color:var(--ocean)}
+
+/* ── FOOTER ── */
+footer{background:#060f1c;color:var(--muted);text-align:center;padding:28px;font-size:13px}
+footer a{color:var(--ocean);text-decoration:none}
+
+/* ── MOBILE ── */
+@media(max-width:860px){
+  .nav-links{display:none}
+  .hero-inner{grid-template-columns:1fr;padding:100px 20px 70px;gap:40px}
+  .hero h1{font-size:38px;letter-spacing:-0.8px}
+  .hero-stats{flex-wrap:wrap;gap:20px}
+  .audience-grid,.skills-grid,.auto-inner{grid-template-columns:1fr}
+  .proj-grid{grid-template-columns:1fr}
+  .tl-item{grid-template-columns:1fr}
+  .tl-left{text-align:left;padding:24px 0 0}
+  .tl-right{padding:12px 0 24px}
+  .tl-dot,.tl-item::after{display:none}
+  .cta h2{font-size:28px}
 }
-
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-}
-
-.project-number {
-  font-size: 13px;
-  font-weight: 800;
-  color: #0b63a5;
-  margin-bottom: 12px;
-}
-
-.project-card h3 {
-  font-size: 19px;
-  color: #17324d;
-  margin-bottom: 12px;
-}
-
-.project-card p {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #667085;
-  margin-bottom: 20px;
-}
-
-.project-tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.project-tools span {
-  padding: 6px 10px;
-  border-radius: 20px;
-  background: #e8f2fb;
-  color: #0b5c91;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-
-
-    /* ---------- CTA ---------- */
-
-    .cta {
-      background: #102a43;
-      color: white;
-      text-align: center;
-      padding: 70px 25px;
-    }
-
-    .cta h2 {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
-
-    .cta p {
-      max-width: 650px;
-      margin: auto auto 25px;
-      color: #d9e2ec;
-    }
-
-    .cta .btn {
-      background: white;
-      color: #102a43;
-    }
-
-    /* ---------- FOOTER ---------- */
-
-    footer {
-      background: #0b1f33;
-      color: #b8c4d1;
-      text-align: center;
-      padding: 25px;
-      font-size: 13px;
-    }
-
-    /* ---------- MOBILE ---------- */
-
-    @media (max-width: 800px) {
-
-      .nav-links {
-        display: none;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-        padding-top: 60px;
-      }
-
-      .hero p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .buttons {
-        justify-content: center;
-      }
-
-      .profile-card {
-        order: -1;
-      }
-
-      .hero h1 {
-        font-size: 40px;
-      }
-
-      .journey {
-        grid-template-columns: 1fr;
-      }
-      .projects-grid {
-         grid-template-columns: 1fr;
-      }
-
-      .focus-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+</style>
 </head>
-
-
 <body>
 
-  <!-- NAVIGATION -->
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="logo">DK <span>·</span> Naval Architect</div>
+    <ul class="nav-links">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="resume.pdf" target="_blank" class="nav-cta">Resume ↗</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <nav>
-    <div class="nav-container">
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="grid-lines"></div>
+  <div class="hero-bg">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="glow1" cx="30%" cy="60%" r="50%">
+          <stop offset="0%" stop-color="#0e7fa3" stop-opacity="0.25"/>
+          <stop offset="100%" stop-color="#0e7fa3" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="glow2" cx="80%" cy="30%" r="40%">
+          <stop offset="0%" stop-color="#1e4d7b" stop-opacity="0.2"/>
+          <stop offset="100%" stop-color="#1e4d7b" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1440" height="900" fill="url(#glow1)"/>
+      <rect width="1440" height="900" fill="url(#glow2)"/>
+      <!-- Mooring lines illustration -->
+      <g opacity="0.18" stroke="#0e7fa3" stroke-width="1" fill="none">
+        <line x1="200" y1="0" x2="350" y2="900" stroke-dasharray="4 6"/>
+        <line x1="280" y1="0" x2="420" y2="900" stroke-dasharray="4 6"/>
+        <line x1="160" y1="0" x2="290" y2="900" stroke-dasharray="4 6"/>
+        <line x1="1100" y1="0" x2="1000" y2="900" stroke-dasharray="4 6"/>
+        <line x1="1180" y1="0" x2="1060" y2="900" stroke-dasharray="4 6"/>
+      </g>
+      <!-- Wave lines -->
+      <g opacity="0.12" stroke="#5dd3f0" stroke-width="1.5" fill="none">
+        <path d="M0 600 Q180 570 360 610 Q540 650 720 600 Q900 550 1080 610 Q1260 650 1440 600"/>
+        <path d="M0 650 Q180 620 360 660 Q540 700 720 650 Q900 600 1080 660 Q1260 700 1440 650"/>
+        <path d="M0 700 Q180 670 360 710 Q540 740 720 700 Q900 660 1080 710 Q1260 740 1440 700"/>
+      </g>
+    </svg>
+  </div>
 
-      <div class="logo">
-        Devkishan Khatri
-      </div>
-
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#journey">Journey</a></li>
-        <li><a href="#focus">Engineering</a></li>
-        <li><a href="#projects">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-    </div>
-  </nav>
-
-
-  <!-- HERO -->
-
-  <section class="hero" id="home">
-
+  <div class="hero-inner">
     <div>
-
-      <span class="hero-tag">
-        Naval Architect • Ocean & Offshore Engineering
-      </span>
-
-      <h1>
-        Devkishan Khatri
-      </h1>
-
-      <h2>
-        Engineering Floating & Offshore Systems Through Analysis, Research & Innovation
-      </h2>
-
-      <p>
-          Naval Architect with a Dual Degree in Ocean Engineering & Naval
-          Architecture from IIT Kharagpur, with experience in hydrodynamics,
-          mooring and anchoring, offshore analysis, marine risers, and
-          floating energy systems.
-      </p>
-
-      <div class="buttons">
-
-        <a href="#journey" class="btn btn-primary">
-          Explore My Work
-        </a>
-
-        <a href="resume.pdf" target="_blank" class="btn btn-secondary">
-          View Resume
-        </a>
-
-        <a href="https://www.linkedin.com/in/devkishan-khatri-331a84226/"
-          target="_blank"
-          class="btn btn-secondary">
-          LinkedIn
-        </a>
-
+      <div class="hero-eyebrow">
+        <span class="dot-pulse"></span>
+        Available for new opportunities
       </div>
-
-    </div>
-
-
-    <div class="profile-card">
-
-      <img
-        src="profile.jpg"
-        alt="Devkishan Khatri"
-      >
-
-    </div>
-
-  </section>
-<!-- JOURNEY -->
-
-<section class="section" id="journey">
-
-  <h2 class="section-title">
-    My Engineering Journey
-  </h2>
-
-  <p class="section-subtitle">
-    From building fundamentals at IIT Kharagpur to offshore analysis,
-    computational research, and real-world floating-system engineering.
-  </p>
-
-  <div class="journey">
-
-    <div class="journey-card">
-
-      <div class="journey-year">
-        2021–2025
-      </div>
-
-      <h3>
-        IIT Kharagpur
-      </h3>
-
-      <p>
-        Dual Degree in Ocean Engineering & Naval Architecture, building
-        strong foundations in hydrodynamics, marine structures,
-        offshore engineering and computational methods.
+      <h1>Naval Architect<br>& <em>Ocean Engineer</em></h1>
+      <p class="hero-sub">
+        IIT Kharagpur dual degree engineer specialising in offshore analysis,
+        mooring systems, hydrodynamics, and engineering automation.
+        Based in Hyderabad — open to offshore O&G roles globally.
       </p>
-
-    </div>
-
-
-    <div class="journey-card">
-
-      <div class="journey-year">
-        2024
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get in Touch →</a>
+        <a href="resume.pdf" target="_blank" class="btn btn-outline">View Resume</a>
+        <a href="https://www.linkedin.com/in/devkishan-khatri-331a84226/" target="_blank" class="btn btn-outline">LinkedIn ↗</a>
       </div>
-
-      <h3>
-        Offshore Engineering
-      </h3>
-
-      <p>
-        Gained practical engineering exposure through internships at
-        IIT Kharagpur and TechnipFMC, including vessel analysis and
-        dynamic marine-riser simulations using OrcaFlex.
-      </p>
-
-    </div>
-
-
-    <div class="journey-card">
-
-      <div class="journey-year">
-        2024–2025
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">AIR 17</div>
+          <div class="stat-label">GATE 2024</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">8.81</div>
+          <div class="stat-label">GPA · IIT KGP</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Projects delivered</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">95%</div>
+          <div class="stat-label">Automation impact</div>
+        </div>
       </div>
-
-      <h3>
-        M.Tech Research
-      </h3>
-
-      <p>
-        Investigated vortex-induced vibration of flexible marine risers
-        using CFD and fluid–structure interaction, developing expertise
-        in computational marine engineering.
-      </p>
-
     </div>
 
-
-    <div class="journey-card">
-
-      <div class="journey-year">
-        2025–Present
+    <div class="hero-card">
+      <img src="profile.jpg" alt="Devkishan Khatri" class="profile-img">
+      <div class="profile-name">Devkishan Khatri</div>
+      <div class="profile-role">Naval Architect · R&D</div>
+      <div class="info-rows">
+        <div class="info-row"><div class="info-icon">🎓</div>IIT Kharagpur · Dual Degree</div>
+        <div class="info-row"><div class="info-icon">🏢</div>Quantsolar Technologies</div>
+        <div class="info-row"><div class="info-icon">📍</div>Hyderabad, India</div>
+        <div class="info-row"><div class="info-icon">📧</div>devkishankhatri2411@gmail.com</div>
       </div>
-
-      <h3>
-        QuantSolar Technologies
-      </h3>
-
-      <p>
-        Naval Architect in R&D working on floating solar systems through
-        hydrodynamics, mooring and anchoring analysis, automation,
-        technical validation and new design development.
-      </p>
-
     </div>
-
   </div>
-
 </section>
- <!-- ENGINEERING EXPERTISE -->
 
-<section class="section" id="focus">
-
-  <h2 class="section-title">
-    Engineering Expertise
-  </h2>
-
-  <p class="section-subtitle">
-    My work combines marine engineering fundamentals, numerical analysis,
-    computational tools, and offshore system design.
-  </p>
-
-  <div class="focus-grid">
-
-    <div class="focus-card">
-
-      <h3>
-        Hydrodynamics & Floating Systems
-      </h3>
-
-      <p>
-        CFD, hydrostatic and hydrodynamic analysis of floating systems
-        using ANSYS Fluent, Maxsurf and ANSYS AQWA.
-      </p>
-
+<!-- WHO IS THIS FOR -->
+<section class="audience" id="audience">
+  <div class="audience-inner">
+    <div class="section-label">Who I work with</div>
+    <h2 class="section-title">Built for multiple paths</h2>
+    <p class="section-desc">Whether you're a recruiter, a client with a technical challenge, or an investor — here's what I bring to the table.</p>
+    <div class="audience-grid">
+      <div class="audience-card recruiter">
+        <div class="audience-icon">⚓</div>
+        <h3>For Recruiters</h3>
+        <p>Targeting offshore O&G roles in mooring analysis, riser engineering, hydrodynamics, and CFD. IIT Kharagpur dual degree, TechnipFMC experience, GATE AIR 17. Available for relocation.</p>
+        <span class="audience-tag">Open to offers globally</span>
+      </div>
+      <div class="audience-card freelance">
+        <div class="audience-icon">🔧</div>
+        <h3>For Freelance Clients</h3>
+        <p>Need mooring analysis, hydrodynamic studies, CFD simulations, or engineering automation tools built? I deliver end-to-end from model setup to final report with IIT-approved methodology.</p>
+        <span class="audience-tag">Project-based engagement</span>
+      </div>
+      <div class="audience-card startup">
+        <div class="audience-icon">🚀</div>
+        <h3>For the Future</h3>
+        <p>Building toward an offshore engineering consultancy focused on floating structures, renewable marine energy, and engineering automation. If you share this vision, let's talk.</p>
+        <span class="audience-tag">Long-term collaboration</span>
+      </div>
     </div>
-
-
-    <div class="focus-card">
-
-      <h3>
-        Mooring & Anchoring
-      </h3>
-
-      <p>
-        Station-keeping analysis using OrcaFlex, including wind, wave
-        and current loading, line tensions, excursions and anchoring
-        configurations.
-      </p>
-
-    </div>
-
-
-    <div class="focus-card">
-
-      <h3>
-        Offshore & Marine Analysis
-      </h3>
-
-      <p>
-        Experience with marine risers, offshore structures and dynamic
-        analysis, including static and dynamic OrcaFlex simulations.
-      </p>
-
-    </div>
-
-
-    <div class="focus-card">
-
-      <h3>
-        Computational Engineering
-      </h3>
-
-      <p>
-        Engineering automation and analysis workflows using Python,
-        VBA, AutoLISP, OrcaFlex Python API and OrcaWave data extraction.
-      </p>
-
-    </div>
-
   </div>
-
 </section>
-<!-- SELECTED ENGINEERING WORK -->
 
-<section class="section" id="projects">
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="exp-inner">
+    <div class="section-label">Career timeline</div>
+    <h2 class="section-title">Experience</h2>
+    <p class="section-desc" style="margin-bottom:48px">From IIT research labs to live offshore projects and engineering automation at scale.</p>
+    <div class="timeline">
 
-  <h2 class="section-title">
-    Selected Engineering Work
-  </h2>
-
-  <p class="section-subtitle">
-    Selected engineering, research and automation work spanning
-    offshore analysis, floating systems and computational engineering.
-  </p>
-
-  <div class="projects-grid">
-
-    <!-- PROJECT 1 -->
-
-    <div class="project-card">
-
-      <div class="project-number">
-        01
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">May 2025 – Present</div>
+          <div class="tl-co">Quantsolar Technologies</div>
+        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-right">
+          <h3>Naval Architect — R&D</h3>
+          <p>Leading mooring analysis, CFD simulation, and hydrodynamic evaluation for floating solar platforms. Delivered 8+ end-to-end projects across India — concept through execution — with direct client coordination and IIT-level design approval. Built automation tools reducing engineering effort by up to 95%.</p>
+          <div class="tag-row">
+            <span class="tag">OrcaFlex</span><span class="tag">ANSYS Fluent</span><span class="tag">ANSYS AQWA</span><span class="tag">Maxsurf</span><span class="tag">Python</span><span class="tag">VBA</span><span class="tag">AutoLISP</span>
+          </div>
+        </div>
       </div>
 
-      <h3>
-        Floating Solar Mooring & Anchoring Analysis
-      </h3>
-
-      <p>
-        Station-keeping analysis of floating solar islands using OrcaFlex
-        under wind, wave and current loading. Evaluated mooring
-        configurations, line tensions, excursions and anchoring behaviour
-        across site-specific load cases.
-      </p>
-
-      <div class="project-tools">
-        <span>OrcaFlex</span>
-        <span>ANSYS Fluent</span>
-        <span>Mooring Analysis</span>
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Jun – Aug 2024</div>
+          <div class="tl-co">TechnipFMC</div>
+        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-right">
+          <h3>Installation & Analysis Engineering Intern</h3>
+          <p>Worked on static and dynamic riser analysis for a Lazy Wave SCR connected to an FPSO in 1,630m water depth. Built a Python automation tool that reads post-processing Excel sheets and auto-generates HPC Flex extraction scripts — adopted by the team and reducing post-processing effort by 90%. Also built a pre-processing spreadsheet generating 96 simulation files from a load case matrix.</p>
+          <div class="tag-row">
+            <span class="tag">OrcaFlex</span><span class="tag">LWSCR</span><span class="tag">Python</span><span class="tag">PyInstaller</span><span class="tag">HPC Flex</span><span class="tag">Riser Analysis</span>
+          </div>
+        </div>
       </div>
 
-    </div>
-
-
-    <!-- PROJECT 2 -->
-
-    <div class="project-card">
-
-      <div class="project-number">
-        02
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">Aug 2024 – May 2025</div>
+          <div class="tl-co">IIT Kharagpur · MoES</div>
+        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-right">
+          <h3>M.Tech Research — VIV in Marine Risers</h3>
+          <p>Conducted high-fidelity CFD simulations on vortex-induced vibration in flexible marine risers under India's Deep Ocean Mission (Government of India). Developed FSI models using FEM within an ALE framework. Investigated VIV suppression via straight and helical grooves, quantifying up to 40% amplitude reduction. Simulations executed on supercomputer with 4.2M+ node mesh.</p>
+          <div class="tag-row">
+            <span class="tag">CFD</span><span class="tag">FSI</span><span class="tag">FEM</span><span class="tag">ALE Framework</span><span class="tag">VIV</span><span class="tag">HPC</span>
+          </div>
+        </div>
       </div>
 
-      <h3>
-        Hydrodynamic & CFD Analysis of Floating Systems
-      </h3>
-
-      <p>
-        Evaluated wind and hydrodynamic loads for floating solar structures
-        using CFD, hydrostatic and hydrodynamic analysis to support
-        structural and mooring design decisions.
-      </p>
-
-      <div class="project-tools">
-        <span>ANSYS Fluent</span>
-        <span>ANSYS AQWA</span>
-        <span>Maxsurf</span>
-      </div>
-
-    </div>
-
-
-    <!-- PROJECT 3 -->
-
-    <div class="project-card">
-
-      <div class="project-number">
-        03
-      </div>
-
-      <h3>
-        Elastic Mooring System — R&D
-      </h3>
-
-      <p>
-        Investigated elastic mooring concepts for floating solar platforms
-        exposed to significant water-level variations, with the objective
-        of improving station keeping and platform stability.
-      </p>
-
-      <div class="project-tools">
-        <span>OrcaFlex</span>
-        <span>Mooring Dynamics</span>
-        <span>R&D</span>
+      <div class="tl-item">
+        <div class="tl-left">
+          <div class="tl-date">2020 – 2025</div>
+          <div class="tl-co">IIT Kharagpur</div>
+        </div>
+        <div class="tl-dot"></div>
+        <div class="tl-right">
+          <h3>Dual Degree — Ocean Engineering & Naval Architecture</h3>
+          <p>Five-year integrated B.Tech + M.Tech programme. Graduated with highest departmental GPA of 8.81/10. Ranked AIR 17 in GATE 2024 (Ocean Engineering). Recipient of Institute Silver Medal and Best Master Thesis Project award. MCM Scholarship holder. Secretary of Sports & Games, Azad Hall.</p>
+          <div class="tag-row">
+            <span class="tag">GPA 8.81/10</span><span class="tag">GATE AIR 17</span><span class="tag">Silver Medal</span><span class="tag">Best MTP</span>
+          </div>
+        </div>
       </div>
 
     </div>
-
-
-    <!-- PROJECT 4 -->
-
-    <div class="project-card">
-
-      <div class="project-number">
-        04
-      </div>
-
-      <h3>
-        Offshore Analysis Automation
-      </h3>
-
-      <p>
-        Developed Python-based engineering workflows using the OrcaFlex
-        Python API to automate extraction of wave-induced pressure data
-        from OrcaWave frequency-domain and OrcaFlex time-domain analyses.
-      </p>
-
-      <div class="project-tools">
-        <span>Python</span>
-        <span>OrcaFlex API</span>
-        <span>OrcaWave</span>
-      </div>
-
-    </div>
-
-
-    <!-- PROJECT 5 -->
-
-    <div class="project-card">
-
-      <div class="project-number">
-        05
-      </div>
-
-      <h3>
-        Vortex-Induced Vibration of Marine Risers
-      </h3>
-
-      <p>
-        Investigated vortex-induced vibration of flexible marine risers
-        through CFD and fluid–structure interaction, using large-scale
-        computational simulations to study riser response and VIV behaviour.
-      </p>
-
-      <div class="project-tools">
-        <span>CFD</span>
-        <span>FSI</span>
-        <span>FEM</span>
-        <span>HPC</span>
-      </div>
-
-    </div>
-
-
-    <!-- PROJECT 6 -->
-
-    <div class="project-card">
-
-      <div class="project-number">
-        06
-      </div>
-
-      <h3>
-        Engineering Design Automation
-      </h3>
-
-      <p>
-        Developed automation tools for repetitive engineering workflows,
-        including steel-section property extraction, mooring coordinate
-        generation and CAD automation, reducing manual calculation and
-        drafting effort.
-      </p>
-
-      <div class="project-tools">
-        <span>Python</span>
-        <span>VBA</span>
-        <span>AutoLISP</span>
-      </div>
-
-    </div>
-
   </div>
-
 </section>
-  <!-- CTA -->
 
-  <section class="cta" id="contact">
+<!-- SKILLS -->
+<section class="skills" id="skills">
+  <div class="skills-inner">
+    <div class="section-label">Technical stack</div>
+    <h2 class="section-title">Skills & Tools</h2>
+    <p class="section-desc" style="margin-bottom:44px">A rare combination of offshore simulation, hydrodynamics, and engineering automation in a single profile.</p>
+    <div class="skills-grid">
+      <div>
+        <div class="skill-group">
+          <h3>Simulation & Analysis</h3>
+          <div class="skill-item">
+            <div class="skill-top"><span class="skill-name">OrcaFlex (Mooring & Riser)</span><span class="skill-pct">Expert</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-top"><span class="skill-name">ANSYS Fluent (CFD)</span><span class="skill-pct">Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-top"><span class="skill-name">ANSYS AQWA</span><span class="skill-pct">Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-top"><span class="skill-name">Maxsurf</span><span class="skill-pct">Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-top"><span class="skill-name">FEA / FSI</span><span class="skill-pct">Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="skill-group">
+          <h3>Automation & Design</h3>
+          <div class="skill-item">
+            <div class="skill-top"><span class="skill-name">Python (Engineering automation)</span><span class="skill-pct">Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-top"><span class="skill-name">VBA (Excel automation)</span><span class="skill-pct">Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:82%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-top"><span class="skill-name">AutoCAD / AutoLISP</span><span class="skill-pct">Advanced</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-top"><span class="skill-name">SolidWorks / Rhino3D</span><span class="skill-pct">Intermediate</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-top"><span class="skill-name">MATLAB / C++</span><span class="skill-pct">Intermediate</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <h2>
-      Interested in my work?
-    </h2>
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="proj-inner">
+    <div class="section-label">Selected work</div>
+    <h2 class="section-title">Engineering Projects</h2>
+    <p class="section-desc" style="margin-bottom:40px">Spanning deepwater offshore, floating renewables, supercomputer-scale CFD, and engineering automation.</p>
+    <div class="proj-grid">
 
-    <p>
-      Explore my projects, research, engineering journey,
-      and experience in Ocean and Offshore Engineering.
-    </p>
+      <div class="proj-card">
+        <div class="proj-num">01 · Offshore O&G</div>
+        <h3>Deepwater Riser Analysis — TechnipFMC</h3>
+        <p>Static and dynamic strength assessment of a Lazy Wave SCR for a gas export riser on an FPSO in 1,630m water depth. 96 load cases covering wave height, period, and direction combinations.</p>
+        <div class="proj-tools"><span>OrcaFlex</span><span>LWSCR</span><span>FPSO</span><span>API RP 2RD</span></div>
+      </div>
 
-    <a
-      href="mailto:devkishankhatri2411@gmail.com"
-      class="btn"
-    >
-      Get in Touch
-    </a>
+      <div class="proj-card">
+        <div class="proj-num">02 · Floating Solar</div>
+        <h3>Mooring Analysis — 8+ Floating Solar Projects</h3>
+        <p>End-to-end mooring and station-keeping analysis for floating solar platforms across India. Optimised asymmetrical mooring configurations to minimise excursions and improve stability.</p>
+        <div class="proj-tools"><span>OrcaFlex</span><span>Mooring Design</span><span>Station Keeping</span></div>
+      </div>
 
-  </section>
+      <div class="proj-card">
+        <div class="proj-num">03 · CFD Research</div>
+        <h3>VIV Suppression in Marine Risers — Deep Ocean Mission</h3>
+        <p>High-fidelity FSI simulations on vortex-induced vibration in flexible risers under Govt. of India funding. Quantified up to 40% VIV amplitude reduction via groove suppression. 4.2M+ node mesh on supercomputer.</p>
+        <div class="proj-tools"><span>CFD</span><span>FSI</span><span>ALE Framework</span><span>HPC</span></div>
+      </div>
 
+      <div class="proj-card">
+        <div class="proj-num">04 · Automation</div>
+        <h3>Python Post-Processing Tool — HPC Flex</h3>
+        <p>Built a generalised Python executable that reads OrcaFlex post-processing Excel sheets and auto-generates Python extraction scripts for HPC Flex — eliminating manual coding per project. Adopted by TechnipFMC team. 90% effort reduction.</p>
+        <div class="proj-tools"><span>Python</span><span>PyInstaller</span><span>HPC Flex</span><span>OrcaFlex</span></div>
+      </div>
 
-  <!-- FOOTER -->
+      <div class="proj-card">
+        <div class="proj-num">05 · Hydrodynamics</div>
+        <h3>Hydrodynamic & CFD Analysis of Floating Barge</h3>
+        <p>Hydrostatic and hydrodynamic evaluation of floating barge for electrical infrastructure using Maxsurf and ANSYS AQWA. Also estimated wind loads using ANSYS Fluent to support mooring design.</p>
+        <div class="proj-tools"><span>ANSYS AQWA</span><span>Maxsurf</span><span>ANSYS Fluent</span></div>
+      </div>
 
-  <footer>
+      <div class="proj-card">
+        <div class="proj-num">06 · R&D</div>
+        <h3>Elastic Mooring System for High Water-Level Variation</h3>
+        <p>Investigated elastic mooring rope concepts for floating solar platforms subject to significant water-level variations — an emerging challenge in reservoir-based floating solar deployments.</p>
+        <div class="proj-tools"><span>OrcaFlex</span><span>Mooring Dynamics</span><span>R&D</span></div>
+      </div>
 
-    <p>
-      © 2026 Devkishan Khatri
-    </p>
+    </div>
+  </div>
+</section>
 
-    <p>
-      Ocean & Offshore Engineering
-    </p>
+<!-- AUTOMATION IMPACT -->
+<section class="automation">
+  <div class="auto-inner">
+    <div class="auto-text">
+      <div class="section-label">Engineering automation</div>
+      <h2 class="section-title" style="font-family:'Space Grotesk',sans-serif;font-size:34px;font-weight:700;letter-spacing:-0.5px;margin-bottom:12px">I don't just run simulations.<br>I make them faster.</h2>
+      <p class="section-desc">Beyond analysis, I actively build tools that eliminate repetitive engineering effort — from CAD scripting to HPC automation pipelines. Every tool I've built has been adopted by the team and is still in use.</p>
+      <a href="#contact" class="btn btn-primary" style="margin-top:8px">Discuss a project →</a>
+    </div>
+    <div class="auto-stats">
+      <div class="auto-stat">
+        <div class="auto-stat-num">95%</div>
+        <div class="auto-stat-info">
+          <h4>Calculation time saved</h4>
+          <p>VBA tool for steel section property extraction (IS 811) — from hours to minutes</p>
+        </div>
+      </div>
+      <div class="auto-stat">
+        <div class="auto-stat-num">90%</div>
+        <div class="auto-stat-info">
+          <h4>Post-processing effort reduced</h4>
+          <p>Python executable for OrcaFlex result extraction from HPC Flex — adopted at TechnipFMC</p>
+        </div>
+      </div>
+      <div class="auto-stat">
+        <div class="auto-stat-num">70%</div>
+        <div class="auto-stat-info">
+          <h4>CAD drafting time saved</h4>
+          <p>AutoLISP script automating mooring line coordinates and properties in AutoCAD</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  </footer>
+<!-- CTA / CONTACT -->
+<section class="cta" id="contact">
+  <h2>Let's work together</h2>
+  <p>Open to offshore O&G roles, freelance engineering projects, and long-term technical partnerships. Based in Hyderabad — available globally.</p>
+  <div class="cta-buttons">
+    <a href="mailto:devkishankhatri2411@gmail.com" class="btn btn-white">Email me →</a>
+    <a href="https://www.linkedin.com/in/devkishan-khatri-331a84226/" target="_blank" class="btn btn-ocean-outline">LinkedIn ↗</a>
+    <a href="resume.pdf" target="_blank" class="btn btn-ocean-outline">Download Resume</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Devkishan Khatri &nbsp;·&nbsp; Naval Architect & Ocean Engineer &nbsp;·&nbsp; <a href="mailto:devkishankhatri2411@gmail.com">devkishankhatri2411@gmail.com</a></p>
+</footer>
+
 </body>
 </html>
